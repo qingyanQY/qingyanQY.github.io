@@ -1,8 +1,7 @@
-## Welcome to GitHub Pages
+## 欢迎来到轻言的资源分享站
 
-You can use the [editor on GitHub](https://github.com/qingyanQY/qingyanQY.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+本网站中所有资源都不直接提供下载链接与地址，我将提供给您所有资源的原作者地址，如有资源说明，则会从MCBBS等帖子中转载链接，以便给予原作者最大的利益收入。由于所提供的分享链接网站服务器在国外，有一定延迟，但所有资源经查证，国内可直接登入，如需要VPN的网站，我也会在下方基于注释。
+另外，在本网站除
 
 ### Markdown
 
