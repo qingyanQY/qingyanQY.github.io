@@ -14,6 +14,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      *{margin:0;padding:0}
+      a{text-decoration:none}
+      #conter{width:1000px;margin:auto}
+      #help-left{width:200px;font-family:'microsoft YaHei';float:left}
+      .menu{border-left:1px solid #ccc;border-right:1px solid #ccc}
+      .menu:last-child{border-bottom:1px solid #ccc}
+      .menu summary{height:40px;line-height:40px;text-indent:10px;outline:0;font-size:14px;font-weight:700;border-top:1px solid #ddd;background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#FEFEFE),color-stop(1,#CCC));cursor:pointer}
+      .menu summary::-webkit-details-marker{display:none}
+      .menu summary:before{content:"+";display:inline-block;width:16px;height:16px;margin-right:10px;font-size:18px;font-weight:700}
+      .menu[open] summary:before{content:"-"}
+      .menu ul{padding:10px 0}
+      .menu ul li{list-style:none;text-indent:25px;font-size:12px;height:30px;line-height:30px}
+      .menu ul li a{display:block;color:#666}
+      .menu ul li a:hover{text-decoration:underline}
+    </style>
                                                                     
 *暂不适配手机屏幕，非常抱歉
 
@@ -56,10 +72,28 @@
          <h4 id="目录部分">目录部分</h3>
           <hr />
             <ul>
-              <li><a href="#欢迎来到轻言的资源分享站"><font size="1">前文简介</font></a></li>
-              <li><a href="#资源列表"><font size="1">资源列表</font></a></li>
-              <li><a href="#近期资源"><font size="1">近期资源</font></a></li>
-              <li><a href="#往期资源按照拼音排序"><font size="1">往期资源</font></a></li>                        
+               <section id="conter">
+                <section id="help-left">
+                 <details class="menu" open>
+                   <summary>前言</summary>
+                   <ul>
+                    <li><a href="#欢迎来到轻言的资源分享站">前文简介</a></li>
+                    <li><a href="#资源列表">资源列表</a></li>
+                    <li><a href="#近期资源">近期资源</a></li>
+                    <li><a href="#往期资源按照拼音排序">往期资源</a></li>
+                   </ul>
+                 </details> 
+                  <details class="menu" open>
+                    <summary>往期资源A ~ E</summary>
+                    <ul>
+                      <li><a href="a">A 部分</a></li>
+                      <li><a href="b">B 部分</a></li>
+                      <li><a href="c">C 部分</a></li>
+                      <li><a href="d">D 部分</a></li>
+                      <li><a href="e">E 部分</a></li>
+                    </ul>
+                  </details>
+                                      
               <li><a href="#a"><font size="1">A （暂无资源）</font></a></li>    
               <li><a href="#b"><font size="1">B （暂无资源）</font></a></li>
               <li><a href="#c"><font size="1">C （暂无资源）</font></a></li>
