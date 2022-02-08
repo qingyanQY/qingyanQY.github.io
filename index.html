@@ -7,10 +7,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      #conter{width:218px;margin:50px}
-      #help-left{width:200px;font-family:'microsoft YaHei';float:left}
-    </style>
+    <style type="text/css">
+                  .nui-scroll {
+                        margin-left: 100px;
+                        width: 200px;
+                        height: 500px;
+                        overflow: auto;
+                  }
+                  
+                  .nui-scroll::-webkit-scrollbar {
+                        width: 8px;
+                        height: 8px;
+                  }
+                  /*正常情况下滑块的样式*/
+                  
+                  .nui-scroll::-webkit-scrollbar-thumb {
+                        background-color: rgba(0, 0, 0, .05);
+                        border-radius: 10px;
+                        -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+                  }
+                  /*鼠标悬浮在该类指向的控件上时滑块的样式*/
+                  
+                  .nui-scroll:hover::-webkit-scrollbar-thumb {
+                        background-color: rgba(0, 0, 0, .2);
+                        border-radius: 10px;
+                        -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+                  }
+                  /*鼠标悬浮在滑块上时滑块的样式*/
+                  
+                  .nui-scroll::-webkit-scrollbar-thumb:hover {
+                        background-color: rgba(0, 0, 0, .4);
+                        -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+                  }
+                  /*正常时候的主干部分*/
+                  
+                  .nui-scroll::-webkit-scrollbar-track {
+                        border-radius: 10px;
+                        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+                        background-color: white;
+                  }
+                  /*鼠标悬浮在滚动条上的主干部分*/
+                  
+                  .nui-scroll::-webkit-scrollbar-track:hover {
+                        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .4);
+                        background-color: rgba(0, 0, 0, .01);
+                  }
+            </style>
  
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>轻言 · 资源 · 分享</title>
@@ -47,7 +89,8 @@
       <header>
         <h1><a href="https://qingyanqy.github.io/"><div class="text" style=" text-align:center;">轻言的资源站欢迎您</a></div></h1>
         <p class="view"><div class="text" style=" text-align:center;"><strong>目 录 部 分</strong></div></p>   
-                <section align="center">
+               <div class="nui-scroll">
+                <section>
                  <details class="menu" close>
                    <summary>前言</summary>
                    <ul>
@@ -128,9 +171,10 @@
                     </ul>
                    </details>                
                  </section>
+                </div>
                 </section>
       </header>
-      <section>
+     <section>
 
       <h2 id="欢迎来到轻言的资源分享站">欢迎来到轻言的资源分享站</h2>
 <p>本网站中所有资源都为<strong>PC端</strong>资源，手机端资源暂无，请谅解！我们提供的所有资源都不直接提供下载链接与地址，我将提供给您所有资源的原作者地址，如有资源说明，则会从MCBBS等帖子中转载链接，以便给予原作者最大的利益收入。由于所提供的分享链接网站服务器在国外，有一定延迟，但所有资源经查证，国内可直接登入，如需要VPN的网站，我也会在下方注释。</p>
