@@ -1,70 +1,34 @@
 <!DOCTYPE html>
-<!-- HTML written by maorx.cn -->
-<!-- Copyright Mao Ruoxin. All Rights Reserved. -->
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="https://doc.maitube.com/pdf/yes/extra/2022/01/02/1f8e221ac3a1a897df29e54dcf79658e/favicon.ico"/>
-		<title>网站维护</title>
-		<style>
-			body {
-				max-width: 100%;
-				margin: 0 30px 0 0;
-				overflow: hidden;
-				font-family: "Microsoft Yahei Light","Microsoft Yahei",PingFangSC-Regular,Helvetica,sans-serif,"等线";
-				cursor: default;
-				-webkit-tap-highlight-color: transparent;
-				-webkit-user-select: none;
-				user-select: none;
-			}
-			h1 {
-				padding-top:200px;
-				margin:0;
-				color: #B762C1;
-				font-family: "Microsoft Yahei",PingFangSC-Regular,Helvetica,sans-serif,"等线";
-				font-weight: bold;
-				font-size: 135px;
-				line-height: 110px;
-			}
-			h2 {
-				font-size: 20px;
-			}
-			p {
-				color: rgba(0,0,0,.6);
-				font-size: small;
-			}
-			.link {
-				color: #FFFDA2;
-				text-decoration: none;
-				transition: all .25s;
-			}
-			.link:hover, #btnHome:hover {opacity: .8;}
-			.link:active {filter: brightness(.8);}
-			#btnHome {
-				position: relative;
-				top: 50px;
-				padding: 8px 30px;
-				background-color: #EA99D5;
-				border-radius: 3px;
-				color: white;
-				font-size: small;
-				text-decoration: none;
-				transition: all .25s;
-			}
-		</style>
-	</head>
-	<body>
-		<h1 align="center">网 站 维 护</h1>
-		<h2 align="center">Oops... 网站页面丢失</h2>
-		<p align="center">很抱歉，由于一些原因，网站界面排版将迎来一次大更改，并进行动画优化。<br>预计网站开放时间：<br><strong>2022 年 07 月</strong><br>带来不便，请您谅解！<br>如需帮助，请<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=k6ahoKOip6qqptPi4r3w-P4" style="text-decoration:none;"><font color="#EA99D5">通过邮件联系我</font></a>。</p>
-		<div style="text-align:center">
-			<a href="https://www.baidu.com/" id="btnHome">返回百度</a>                    
-		</div>
-		<script>
-			oncontextmenu = function() {
-				return false;
-			};
-		</script>
-	</body>
+<html lang="zh">
+
+<head>
+    <!--{{meta.html}}-->
+    <meta name="description" content="本网站为B站UP主老弟一号的个人网站，用于提供文件下载与一些跳转服务">
+    <meta name="keywords" content="老弟一号,LaodiTeachTips,LDTstore">
+    <title>LaodiTeachTips</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!--{{icon.svg}}-->
+
+    <div id="background"></div>
+
+    <div id="header" onclick="side('about')">
+        <img src="{{IMAGE}}/shared/laodi-64px.png">
+        <span>LaodiTeachTips</span>
+    </div>
+
+    <!--{{major}}-->
+
+    <div id="side"></div>
+
+    <!--{{footer}}-->
+
+    <!--{{sides}}-->
+
+    <script>const PAGE_TYPE = "home";</script>
+    <script src="/main.js"></script>
+</body>
+
 </html>
