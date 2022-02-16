@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
     <link rel="icon" href="https://doc.maitube.com/pdf/yes/extra/2022/01/02/1f8e221ac3a1a897df29e54dcf79658e/favicon.ico" />
     <link rel="Shortcut Icon" href="https://doc.maitube.com/pdf/yes/extra/2022/01/02/1f8e221ac3a1a897df29e54dcf79658e/favicon.ico"  type="image/x-icon />
+    <link rel="stylesheet" type="text/css" href="modalBox.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -190,7 +191,6 @@
 <hr />                         
 <h2 id="意见反馈">意见反馈</h2>
 <p><strong>重要：</strong>如果网站有Bug或有对网站的任何建议，请通过<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=k6ahoKOip6qqptPi4r3w-P4" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_11.png"/></a>或 加<strong>QQ：523014995</strong>来联系到我（请标明来意）<br>当然你也可以有更快捷的建议留言方式，又不懂的问题或者对网站的任何建议请通过<a target="_blank" href="https://support.qq.com/products/375276?"><font color="red">点击此处</font></a>来向我反映</p>
-<p><strong><font color="blue">本网站开源地址：</font></strong><a target="_blank" href="https://qingyanqyy.github.io"><font color="red">点击此处跳转至网页开源地址</font></a></p>
 <hr />
 <p><strong>重要提醒：</strong>资源数量如果太多，找起来麻烦，可按下键盘上的<font color="#f00"><strong><font color="red">Ctrl + F</font></font></strong>来帮助寻找并快速定位资源</p>
 <blockquote>
@@ -219,7 +219,22 @@
 <blockquote>
   <p>我们将资源以列表的方式向您呈现，以便您找到自己想要的资源。</p>
 </blockquote>
-
+<!-- 模态框 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>头部</h2>
+                <span id="closeBtn" class="close">×</span>
+            </div>
+            <div class="modal-body">
+                <p>这是一个模态框！</p>
+                <p>喜欢就点个赞吧！</p>
+            </div>
+            <div class="modal-footer">
+                <h3>尾部</h3>
+            </div>
+        </div>
+    </div>
 <h3 id="近期资源">最新发布</h3>
 
 <table>
@@ -237,7 +252,7 @@
       <td style="text-align: center">1</td>
       <td style="text-align: center">缤纷友尽-双人合作闯关</td>
       <td style="text-align: center">1.13~1.15.2</td>
-      <td style="text-align: center"><a href="https://www.mcbbs.net/thread-816693-1-1.html?tdsourcetag=s_pcqq_aiomsg" target="_blank">点此下载MBS</a></td>
+      <td style="text-align: center"><a id="triggerBtn">点此下载MBS</a></td>
       <td style="text-align: center">/</td>
     </tr>
     <tr>
@@ -1195,5 +1210,6 @@
       </footer>
     </div>
     <script src="/assets/js/scale.fix.js"></script>
+    <script type="text/javascript" src="modalBox.js"></script>
   </body>
 </html>
