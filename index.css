@@ -26,11 +26,6 @@
     --color-line-bg: #333333;
 } */
 
-.content {
-    background-color: #e7e7e7;
-    min-height: 100vh;
-}
-
 .menu-box {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 0.5px;
