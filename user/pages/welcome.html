@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css">
+
+	<link rel="stylesheet" href="../css/color.css" media="all">
+
+	<style type="text/css">
+
+		.layui-timeline-axis {
+
+			background-color: rgba(0,0,0,0);
+
+		}
+
+	</style>
+
+</head>
+
+<body style="background-color: #F2F2F2;min-width: 760px;">
+
+	<div class="layui-container">
+
+		<div class="layui-row" style="display: none;margin-top:20px;" id="pay">
+
+			<div class="layui-card">
+
+				<div class="layui-card-header">白名单</div>
+
+				<div class="layui-card-body">
+
+					<div class="layui-form">
+
+						<div class="layui-form-item" style="margin-left: 50px;">
+
+							<h3>您不是白名单玩家，无法享受优先极速下载通道</h3>
+
+							<h3>如果您愿意支持我们，可以捐助38元获取380枚枫叶</h3>
+
+							<h2>然后在<a href="/user/main.html#shop" target="_blank" style="color: red;">兑换商城</a>即可兑换白名单<a style="color: red;">(需要手动完成兑换)</a></h2>
+
+						</div>
+
+						<div class="layui-form-item" style="margin-left: 50px;">
+
+							<div style="margin-top: 10px;">
+
+								<button class="layui-btn" onclick="donate()">捐助枫叶</button>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="layui-row" style="margin-top: 20px">
+
+			<div class="layui-card">
+
+				<div class="layui-card-header">Java(游戏必备环境)</div>
+
+				<div class="layui-card-body">
+
+					<div class="layui-form">
+
+						<div class="layui-form-item" style="margin-left: 50px;">
+
+							<h3>本站所有整合包都依赖于Java版我的世界</h3>
+
+							<h3>强烈建议您使用64位的Java8</h3>
+
+							<h3>建议您在这里下载，以防止下错版本</h3>
+
+							<h3>(下错版本将无法进入游戏或造成游戏频繁崩溃)</h3>
+
+							<a class="layui-btn" style="margin-left: 30px;margin-top: 18px" onclick="downloadFile('QpzLqf6',true)">下载通道1</a>
+
+							<a class="layui-btn" style="margin-left: 30px;margin-top: 18px" href="https://www.lanzoui.com/iamr5sh" target="new">下载通道2</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div style="margin-top: 20px;display: none;" id="notice">
+
+			<div class="layui-row" style="margin-top: 20px">
+
+				<div class="layui-card">
+
+					<div class="layui-card-header">常见问题</div>
+
+					<div class="layui-card-body">
+
+						<div class="layui-collapse">
+
+							<div class="layui-colla-item">
+
+								<h2 class="layui-colla-title">怎么使用整合包?</h2>
+
+								<div class="layui-colla-content">
+
+									1.下载Java
+
+									(
+
+									<a onclick="downloadFile('QpzLqf6',true)">下载通道1</a>
+
+									| <a href="https://www.lanzoui.com/iamr5sh" target="new">下载通道2</a>
+
+									)
+
+									<br>
+
+									！强烈推荐您在此处下载Java，可以帮助您避免很多版本错误以及游戏崩溃无法启动的问题
+
+									<br><br>
+
+									2.下载整合包<br>
+
+									！如果出现未知错误，请过一段时间再试试看，或者试试其他的整合包<br>
+
+									<br>
+
+									3.解压整合包<br>
+
+									！下载后千万不要直接双击运行，要右键点击它，进行解压
+
+									<br><br>
+
+									4.进入解压后的文件夹并开始游戏<br>
+
+									进入解压后的文件夹，有一个开始游戏的文件(图标是个工作台)，运行他就可以了
+
+									<br><br>
+
+									您还可以参考我们的<a href="https://www.bilibili.com/video/BV1GA411T7tN" target="new">视频教程</a>和<a href="http://help.yfdadi.com" target="new">博客</a>，来获取更多帮助
+
+
+
+								</div>
+
+							</div>
+
+							<div class="layui-colla-item">
+
+								<h2 class="layui-colla-title">整合包更新周期?</h2>
+
+								<div class="layui-colla-content">
+
+									整合包每月都会有更新，要耐心等待叶枫发布哦~
+
+								</div>
+
+							</div>
+
+							<div class="layui-colla-item">
+
+								<h2 class="layui-colla-title">有没有重生服务器群?</h2>
+
+								<div class="layui-colla-content">我们只有一个重生服务器QQ群:952501368</div>
+
+							</div>
+
+							<div class="layui-colla-item">
+
+								<h2 class="layui-colla-title">为什么不能连锁挖矿?</h2>
+
+								<div class="layui-colla-content">
+
+									一般整合包内包含连锁挖矿，您在挖矿的时候按住~键就可以了
+
+								</div>
+
+							</div>
+
+							<div class="layui-colla-item">
+
+								<h2 class="layui-colla-title">为什么传送没权限?</h2>
+
+								<div class="layui-colla-content">
+
+									您在游戏中按下Esc键，点击局域网对外开放，将允许作弊设置为开启状态，然后创建局域网世界就可以了
+
+								</div>
+
+							</div>
+
+							<div class="layui-colla-item">
+
+								<h2 class="layui-colla-title">怎么才能和朋友联机?</h2>
+
+								<div class="layui-colla-content">
+
+									1.首先可以使用游侠对战平台(需要两个人共同安装)<br>
+
+									2.其次您还可以使用我们提供的联机工具(已开放下载)
+
+								</div>
+
+							</div>
+
+							<div class="layui-colla-item">
+
+								<h2 class="layui-colla-title">死亡不掉落指令是什么?</h2>
+
+								<div class="layui-colla-content">
+
+									1.在游戏中打开命令输入框(按/键或者t键，命令是以/开头，不带/会发送到聊天频道)<br>
+
+									2.完整的命令是/gamerule keepInventory true<br>
+
+									(注意区分大小写,尽量复制粘贴)
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="layui-row" style="margin-top: 20px">
+
+				<div class="layui-card">
+
+					<div class="layui-card-header">更新日志</div>
+
+					<div class="layui-card-body">
+
+						<ul class="layui-timeline">
+
+							<li class="layui-timeline-item">
+
+								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+
+								<div class="layui-timeline-content layui-text">
+
+									<h3 class="layui-timeline-title">2021年</h3>
+
+									<p>上次时间 2021年 7月 28日</p>
+
+									<ul>
+
+										<li>完成更新:整合包全面优化</li>
+
+										<li>计划下次更新:下载链接修复经常转圈圈</li>
+
+										<li>计划下次更新:全新的客户端</li>
+
+										<li><a onclick="openHelp()">如对有疑问可以进行反馈(目前反馈暂时停用，请到QQ群中反馈)</a></li>
+
+									</ul>
+
+								</div>
+
+							</li>
+
+							<li class="layui-timeline-item">
+
+								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+
+								<div class="layui-timeline-content layui-text">
+
+									<div class="layui-timeline-title">不再提供更早的更细记录</div>
+
+								</div>
+
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	
+
+	<script src="https://www.layuicdn.com/layui/layui.js" charset="utf-8"></script>
+
+	<script src="../js/cookie.js" charset="utf-8"></script>
+
+	<script src="../js/file.js" charset="utf-8"></script>
+
+	<script type="text/javascript">
+
+		var player;
+
+		layui.use(['form', 'layer', 'element'], function() {
+
+			if (getCookie("type") == 0) {
+
+				layui.$('#pay').show();
+
+				layui.$('#notice').hide();
+
+			} else {
+
+				layui.$('#pay').hide();
+
+				layui.$('#notice').show();
+
+			}
+
+			player = getCookie('name');
+
+			layui.$.get("/api/baseInfo.php",function(result){
+
+				if(result.code == 0) {
+
+					layui.$('#coins').html(result.data.coins);
+
+					layui.$('#leaves').html(result.data.leaves);
+
+				}
+
+			});
+
+		});
+
+		function donate() {
+
+			layer.confirm('非常感谢您能捐助我们，但请您注意：<br>'+
+
+				'捐助为自愿行为，未满18周岁的用户请理性捐助，适度消费。', {icon: 3}, function(index){
+
+					layer.close(index);
+
+					layer.open({
+
+						type: 2,
+
+						title: '感谢用户 ' + player + ' 捐助我们',
+
+						shade: [0.3, '#000'],
+
+						area: ['460px', '430px'],
+
+						content: ['/donate.html?player=' + player + '&time=' + Date.parse(new Date()), 'no'],
+
+						success: function(layero) {}
+
+					});
+
+				});
+
+		}
+
+		function openHelp() {
+
+			layer.confirm('是否可以在反馈平台询问游戏崩溃问题<br>或者是游戏卡顿问题<br>以及游戏上的一些操作问题', {
+
+			  btn: ['可以', '不可以']
+
+			  ,title: '反馈提问前建议先查看相关教程'
+
+			  ,success: function(layero){
+
+				  var btn = layero.find('.layui-layer-btn');
+
+					btn.find('.layui-layer-btn1').attr({
+
+						href: 'https://support.qq.com/products/152967/'
+
+						,target: '_blank'
+
+					});
+
+				}
+
+			}, function(index, layero){
+
+			  console.log('btn1')
+
+			});
+
+		}
+
+		function sign() {
+
+			layui.$.get("/api/sign.php",function(result){
+
+				if(result.code == 0) {
+
+					layer.msg(result.msg, {icon: 6});
+
+					layui.$.get("/api/baseInfo.php",function(result){
+
+						if(result.code == 0) {
+
+							layui.$('#coins').html(result.data.coins);
+
+							layui.$('#leaves').html(result.data.leaves);
+
+						}
+
+					});
+
+				} else if(result.code == -1){
+
+					layer.msg(result.msg, {icon: 5});
+
+				} else {
+
+					layer.msg('未知错误', {icon: 5});
+
+				}
+
+			});
+
+		}
+
+		</script>
+
+		<script src="/js/baidu.js"></script>
+
+	</body>
+
+	</html>
+
