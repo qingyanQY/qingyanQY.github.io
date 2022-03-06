@@ -28,7 +28,7 @@
 			
 			}else{undefined
 			
-				top.location.href='https://qingyanqy.github.io/user.html#welcome';
+				history.go(-1)
 			
 			}
 		</script>
@@ -123,6 +123,12 @@
 
 									class="layui-icon layui-icon-component"></i><span class="layui-nav-title">启动器</span></a>
 
+						<li class="layui-nav-item">
+
+							<a href="javascript:;" lay-url="lianji" lay-icon="true"><i
+
+									class="layui-icon layui-icon-website"></i><span class="layui-nav-title">关于联机</span></a>
+
 						</li>
 
 						<li class="layui-nav-item">
@@ -160,6 +166,14 @@
 
 						<li class="layui-nav-item">
 
+							<a href="javascript:;" lay-url="skin" lay-icon="true"><i
+
+									class="layui-icon layui-icon-theme"></i><span class="layui-nav-title">皮肤站</span></a>
+
+						</li>
+
+						<li class="layui-nav-item">
+
 							<a href="javascript:;" lay-url="shop" lay-icon="true"><i
 
 									class="layui-icon layui-icon-cart"></i><span class="layui-nav-title">游戏代购</span></a>
@@ -184,9 +198,14 @@
 
 					</li>
 
-				<li lay-id="open" class="">
-					<i class="layui-icon layui-icon-component">
-					</i><span class="layui-nav-title">启动器</span></li>
+					<li lay-id="open" class="">
+						<i class="layui-icon layui-icon-component"></i>
+						<span class="layui-nav-title">启动器</span>
+					</li>
+					<li lay-id="lianji" class="">
+						<i class="layui-icon layui-icon-website"></i>
+						<span class="layui-nav-title">关于联机</span>
+					</li>
 					<li lay-id="modpacks" class="">
 						<i class="layui-icon layui-icon-app"></i>
 						<span class="layui-nav-title">数据包</span>
@@ -197,10 +216,14 @@
 						<li lay-id="resources" class="">
 							<i class="layui-icon layui-icon-flag"></i>
 							<span class="layui-nav-title">光影材质</span>
-						</li
-						><li lay-id="saves" class="">
+						</li>
+						<li lay-id="saves" class="">
 							<i class="layui-icon layui-icon-note"></i>
 							<span class="layui-nav-title">地图存档</span>
+						</li>
+						<li lay-id="skin" class="">
+							<i class="layui-icon layui-icon-theme"></i>
+							<span class="layui-nav-title">皮肤站</span>
 						</li>
 						<li lay-id="shop" class="">
 							<i class="layui-icon layui-icon-cart"></i>
@@ -226,31 +249,43 @@
 
 					<div class="layui-tab-item layui-show">
 
-						<iframe src="user/pages/modpacks/pages1/modpacks.html" frameborder="0" class="layui-layout-iframe"></iframe>
+						<iframe id="lianji" src="user/pages/lianji/lianji.html" frameborder="0" class="layui-layout-iframe"></iframe>
 
 					</div>
 
 					<div class="layui-tab-item layui-show">
 
-						<iframe src="user/pages/mods/pages1/mods.html" frameborder="0" class="layui-layout-iframe"></iframe>
+						<iframe id="modpacks" src="user/pages/modpacks/pages1/modpacks.html" frameborder="0" class="layui-layout-iframe"></iframe>
 
 					</div>
 
 					<div class="layui-tab-item layui-show">
 
-						<iframe src="user/pages/resources/pages1/resources.html" frameborder="0" class="layui-layout-iframe"></iframe>
+						<iframe id="mods" src="user/pages/mods/pages1/mods.html" frameborder="0" class="layui-layout-iframe"></iframe>
 
 					</div>
 
 					<div class="layui-tab-item layui-show">
 
-						<iframe src="user/pages/saves/pages1/saves.html" frameborder="0" class="layui-layout-iframe"></iframe>
+						<iframe id="resources" src="user/pages/resources/pages1/resources.html" frameborder="0" class="layui-layout-iframe"></iframe>
 
 					</div>
 
 					<div class="layui-tab-item layui-show">
 
-						<iframe src="user/pages/shop/shop.html" frameborder="0" class="layui-layout-iframe"></iframe>
+						<iframe id="saves" src="user/pages/saves/pages1/saves.html" frameborder="0" class="layui-layout-iframe"></iframe>
+
+					</div>
+
+					<div class="layui-tab-item layui-show">
+
+						<iframe id="skin" src="http://www.skinme.cc/" frameborder="0" class="layui-layout-iframe"></iframe>
+
+					</div>
+
+					<div class="layui-tab-item layui-show">
+
+						<iframe id="shop" src="user/pages/shop/shop.html" frameborder="0" class="layui-layout-iframe"></iframe>
 
 					</div>
 
