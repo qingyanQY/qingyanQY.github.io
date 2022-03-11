@@ -6,16 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>做个选择吧~</title>
     <link rel="stylesheet" href="css/index2.css">
+    <script type="text/javascript">
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i) ? true: false;
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i) ? true: false;
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true: false;
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i) ? true: false;
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+            }
+        };
+        if (isMobile.any()) {
+            window.open('https://qingyanqy.github.io/phone','_self');
+        }
+    </script>
     <style>
      h1 {
         width: 25%;
         margin: 11rem auto;
-
         font-family: 'Baron Neue';
         font-size: 4vw;
         color: white;
         text-align: center;
-
         border-top: solid 2px white;
         border-bottom: solid 2px white;
     }
@@ -40,6 +60,6 @@
         <h2>RES · 教程中心<sub><a style="color:rgb(110, 110, 110)">(暂未开放)</sub></h2>
         <p>用于教学本站所有资源安装方式<br>提供视频教程服务（暂未开放）<br>可以说是全网最详细的教程<br>有任何问题<br>请在资源站右上角的反馈以反馈问题</p>
     </div>
-</div> 
+</div>
 </body>
 </html>
