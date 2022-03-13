@@ -1,65 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>做个选择吧~</title>
-    <link rel="stylesheet" href="css/index2.css">
-    <script type="text/javascript">
-        var isMobile = {
-            Android: function() {
-                return navigator.userAgent.match(/Android/i) ? true: false;
-            },
-            BlackBerry: function() {
-                return navigator.userAgent.match(/BlackBerry/i) ? true: false;
-            },
-            iOS: function() {
-                return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true: false;
-            },
-            Windows: function() {
-                return navigator.userAgent.match(/IEMobile/i) ? true: false;
-            },
-            any: function() {
-                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index_style.css">
+  <title>让我们来做个选择吧！</title>
+  <script type="text/javascript">
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i) ? true: false;
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i) ? true: false;
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true: false;
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i) ? true: false;
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+        }
         };
         if (isMobile.any()) {
-            window.open('https://qyres.ml/phone','_self');
+            window.alert("系统提示：\n 轻言检测到您正在使用 手机/Ipad 等移动设备进入本站！\n 您当然可以使用此设备进入本站，但本站资源都是电脑端资源，建议您使用电脑下载获得更好的体验！\n 此引导页不适配您的设备，点击确定后将自动跳转到适和您设备的界面~");
+            window.open('https://www.qyres.ml/phone','_self')
         }
     </script>
-    <style>
-     h1 {
-        width: 25%;
-        margin: 11rem auto;
-        font-family: 'Baron Neue';
-        font-size: 4vw;
-        color: white;
-        text-align: center;
-        border-top: solid 2px white;
-        border-bottom: solid 2px white;
-    }
-    </style>
 </head>
-<body background="img/cool-background.png">    
-    <h1>让我们来做个选择吧！</h1>
-   <div class="card" onclick="window.open('https://www.qyres.ml')">
-       <div class="imgbox">
-           <img src="img/ziyuan.png">
-       </div>
-       <div class="content">
-           <h2>RES · 资源网站</h2>
-           <p>一个小型简易的中转类型网站<br>网站并不提供一切下载服务<br>用于存放一切在我视频中出现的资源，方便下载。<br>所有的资源内容均免费<br>访问速度略慢，请耐心等待~</p>
-       </div>
-   </div>
-   <div class="card">
-    <div class="imgbox">
-        <img src="img/jiaocheng.png">
+<body background="img/cool-background.png">
+  <div class="container">
+    <div class="card" onclick="window.open('https://www.qyres.ml')">
+      <div class="imgBx">
+        <img src="img/ziyuan.png" alt="">
+      </div>
+      <div class="content">
+        <h2>RES · 资源网站</h2><br>
+        <p>一个小型简易的非盈利性中转类型网站，本网站不提供一切下载服务，本站内所有下载均来源于原作者转载，且只用于存放一切在我视频中出现的资源，方便下载。所有的资源内容均免费，访问速度略慢，请耐心等待~</p>
+      </div>
     </div>
-    <div class="content">
-        <h2>RES · 教程中心<sub><a style="color:rgb(110, 110, 110)">(暂未开放)</sub></h2>
-        <p>用于教学本站所有资源安装方式<br>提供视频教程服务（暂未开放）<br>可以说是全网最详细的教程<br>有任何问题<br>请在资源站右上角的反馈以反馈问题</p>
+    <div class="card" onclick="window.open('')">
+      <div class="imgBx">
+        <img src="img/jiaocheng.png" alt="">
+      </div>
+      <div class="content">
+        <h2>RES · 教程中心<sup><a style="color: rgb(102, 102, 102);">暂未开放</a></sup></h2><br>
+        <p><a style="color: rgb(102, 102, 102);">用于教学本站所有资源安装,将会提供视频教程服务<strong>（暂未开放）</strong>。可以说是全网最详细的教程，没有之一。<br>有任何问题，请在资源站右上角的反馈以反馈问题</a></p>
+      </div>
     </div>
-</div>
+    <div class="card" onclick="window.open('https://classic.minecraft.net/')">
+      <div class="imgBx">
+        <img src="img/minecraft.png" alt="">
+      </div>
+      <div class="content">
+        <h2>线上3DMinecraft</h2><br>
+        <p>一个在网站上的Minecraft！据说是早期的Minecraft版本，背包键都还是最原始的“B”键！方块数量也极少，地图大小也是有限的呢~</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
