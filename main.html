@@ -27,6 +27,19 @@
 			background:rgba(0,0,0,0.0); /*设置div背景色为透明*/
 			margin:0 auto; /*设置div居中显示*/
 			}
+			
+			#test{
+				animation:change 10s linear 0s infinite;
+				font-size:30px;
+				font-weight:700;
+			}
+			@keyframes change{
+				0%{color:#333;}
+				25%{color:#ff0;}
+				50%{color:#f60;}
+				75%{color:#cf0;}
+				100% {color:#f00;}
+			}
 
 		</style>
 	</head>
@@ -53,10 +66,10 @@
 									<nav>
 										<ul id="nav">
 											<li class="current_page_item"><a href="#home">主页</a></li>
-											<li><a target="_blank" href="user.html">资源中心</a></li>
-											<li><a target="_blank" href="#modpack">关于网站</a></li>
-											<li><a target="_blank" href="#me">关于我的</a></li>
-											<li><a target="_blank" href="https://shimo.im/docs/913JVGRQ8aHYr03E/">帮助</a></li>
+											<li><a href="user.html">资源中心</a></li>
+											<li><a href="#modpack">关于网站</a></li>
+											<li><a target="_blank" href="https://qingyanqyy.github.io" id="label-register">旧版网站</a></li>
+											<li><a href="https://shimo.im/docs/913JVGRQ8aHYr03E/">帮助</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -263,6 +276,43 @@
 			</div>
 			<!-- Bottom Footer Area End -->
 		</footer>
+		<script>
+			setTimeout(function() {
+				$.get("//www.yfdadi.com/api/ping.php", function(data, status) {
+					var num;
+					if (data == '-1') {
+						num = '[异常] 0';
+					} else {
+						num = Number(data);
+					}
+					$('#online').html(num + '');
+
+				});
+			}, 5000);
+			var white = true;
+			setInterval(function() {
+				if(white == false) {
+					$("#label-register").css('color','white');
+					white = true;
+				}else {
+					$("#label-register").css('color','orange');
+					white = false;
+				}
+			}, 800);
+			
+			setInterval(function() {
+				$.get("//www.yfdadi.com/api/ping.php", function(data, status) {
+					var num;
+					if (data == '-1') {
+						num = '[异常] 0';
+					} else {
+						num = Number(data);
+					}
+					$('#online').html(num + '');
+
+				});
+			}, 60000);
+		</script>
 		<script src="js/jquery-2.2.4.min.js"></script>
 		<!-- Bootstrap js -->
 		<script src="js/bootstrap.min.js"></script>
